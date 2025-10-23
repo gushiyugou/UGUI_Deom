@@ -44,13 +44,13 @@ public class LoginPanel : BasePanel
             if (account.text.Length == 0)
             {
                 TipPanel tipPanel = UIManager.Instance.ShowPanel<TipPanel>();
-                tipPanel.ChangeInfo("请输入注册账号！");
+                tipPanel.ChangeInfo("请输入账号！");
                 return;
             }
             else if (password.text.Length == 0)
             {
                 TipPanel tipPanel = UIManager.Instance.ShowPanel<TipPanel>();
-                tipPanel.ChangeInfo("请输入注册密码！");
+                tipPanel.ChangeInfo("请输入密码！");
                 return;
             }
             else if (account.text.Length <= 6 || password.text.Length <= 6)
@@ -71,6 +71,18 @@ public class LoginPanel : BasePanel
 
                 //判断是否进入过服务器面板，没有则进入选服面板，有则进入服务器面板
                 //UIManager.Instance.ShowPanel<ServerPanel>();
+                if(LoginManager.Instacne.loginData.frontServerID <= 0)
+                {
+                    //没有选择过服务器，打开选择服务器面板
+                    
+                    UIManager.Instance.ShowPanel<ChooseServerPanel>();
+                    UIManager.Instance.HidePanel<LoginPanel>();
+                }
+                else
+                {
+                    //打开已选择过服务器的面板
+                    UIManager.Instance.ShowPanel<ServerPanel>();
+                }
             }
             else
             {
@@ -103,6 +115,27 @@ public class LoginPanel : BasePanel
         if (autoLoginToggle.isOn)
         {
             //自动登录逻辑
+            if (LoginManager.Instacne.AccountLogin(account.text, password.text))
+            {
+                if (LoginManager.Instacne.loginData.frontServerID <= 0)
+                {
+                    //没有选择过服务器，打开选择服务器面板
+
+                    UIManager.Instance.ShowPanel<ChooseServerPanel>();
+                    UIManager.Instance.HidePanel<LoginPanel>();
+                }
+                else
+                {
+                    //打开已选择过服务器的面板
+                    UIManager.Instance.ShowPanel<ServerPanel>();
+                }
+                UIManager.Instance.HidePanel<LoginPanel>(false);
+            }
+            else
+            {
+                TipPanel tipPanel = UIManager.Instance.ShowPanel<TipPanel>();
+                tipPanel.ChangeInfo("自动登录失败，请重新输入账号和密码！");
+            }
         }
     }
     public void UpdataPanelData(string account,string password)

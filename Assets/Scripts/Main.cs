@@ -13,6 +13,7 @@ public class Main : MonoBehaviour
     void Start()
     {
         //tipPanel =  UIManager.Instance.ShowPanel<TipPanel>();
+        UIManager.Instance.ShowPanel<LoginBackgroundPanel>();
         loginPanel = UIManager.Instance.ShowPanel<LoginPanel>();
         //UIManager.Instance.ShowPanel<RegisterPanel>();
     }

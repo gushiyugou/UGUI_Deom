@@ -131,8 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8970739516166428782}
   - component: {fileID: 5061770744548780824}
-  - component: {fileID: 8393261090993997623}
   - component: {fileID: 1540923248237207448}
+  - component: {fileID: 462376933131649457}
   m_Layer: 5
   m_Name: TipPanel
   m_TagString: Untagged
@@ -168,36 +168,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521026063123599196}
   m_CullTransparentMesh: 1
---- !u!114 &8393261090993997623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521026063123599196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &1540923248237207448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,9 +180,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fdfd4c9f461cb49a5440af87a20965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaSpeed: 10
+  fadeSpeed: 10
   confirmBtn: {fileID: 1273673688554290867}
   textInfo: {fileID: 3419126121238912089}
+--- !u!225 &462376933131649457
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521026063123599196}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1718768013172674581
 GameObject:
   m_ObjectHideFlags: 0

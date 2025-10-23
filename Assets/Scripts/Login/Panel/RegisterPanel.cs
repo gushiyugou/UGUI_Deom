@@ -53,6 +53,7 @@ public class RegisterPanel : BasePanel
             //隐藏自身面板，打开其他面板
             if (LoginManager.Instacne.AccountRegister(accountInput.text, passwordInput.text))
             {
+                LoginManager.Instacne.ClearLoginData();
                 LoginPanel loginPanel = UIManager.Instance.ShowPanel<LoginPanel>();
                 loginPanel.UpdataPanelData(accountInput.text, passwordInput.text);
                 UIManager.Instance.HidePanel<RegisterPanel>();

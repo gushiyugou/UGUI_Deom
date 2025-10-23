@@ -11,4 +11,5 @@ public class LoginData
 
 
     //服务器相关
+    public int frontServerID = 0;
 }
