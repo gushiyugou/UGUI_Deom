@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+UnityVersion: 2023.2.20f1c1
+CRC: 3671925537
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f0a84a96a9691e1b76276fc7da38f653
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9f349c36d7a6532f767333f9299b3e74
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6ea09d8262decf53b80a5ebd698a648c
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtRes/Game UI/Icons-01/02.png
+- Assets/ArtRes/Game UI/Buttons-01/10.png
+- Assets/ArtRes/Game UI/Buttons-01/26.png
+- Assets/ArtRes/Game UI/Icons-01/25.png
+Dependencies: []

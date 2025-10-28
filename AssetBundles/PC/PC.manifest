@@ -1,0 +1,11 @@
+ManifestFileVersion: 0
+UnityVersion: 2023.2.20f1c1
+CRC: 323068637
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: playermodle
+      Dependencies: {}
+    Info_1:
+      Name: button
+      Dependencies: {}
